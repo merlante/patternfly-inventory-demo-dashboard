@@ -130,7 +130,7 @@ const StockChart: React.FunctionComponent = () => {
       ariaDesc="Stock count"
       ariaTitle="Realtime stock inventory"
       containerComponent={<ChartVoronoiContainer labels={({ datum }) => `${datum.name}: ${datum.y}`} constrainToVisibleArea />}
-      domainPadding={{ x: [30, 25] }}
+      domainPadding={{ x: [55, 55] }}
       legendData={legendData(skus)}
       legendPosition="bottom-left"
       height={400}
