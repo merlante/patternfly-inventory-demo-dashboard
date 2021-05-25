@@ -1,12 +1,14 @@
 # patternfly-inventory-demo-dashboard
 
-This dashboard is the component that provides the visual "front door" to the kafka inventory demo app. It retrieves and displays topic messages from the TOPICS_WEBSOCKET_ENDPOINT uri and is extendable to provide other actions to simulate inventory movement events.
+This dashboard is the component that provides the visual "front door" to the kafka inventory demo app. It's a Patternfly app running in a web browser that retrieves and displays topic messages from the TOPICS_WEBSOCKET_ENDPOINT uri. It is also intended to be extendable to provide other actions to simulate inventory movement events.
+
+The dashboard is a single page browser app that is served statically from a web server. A dockerfile is provided (see below) for creating a container based on nginx that serves the webpack bundle.
 
 This demo dashboard is based on the Patternfly Seed (https://github.com/patternfly/patternfly-react-seed), which is an open source build scaffolding utility for web apps.
 
 ## Development quick-start
 
-The dashboard will only display data when https://github.com/merlante/quarkus-kafka-inventory-demo is running. See there for running instructions. If the dashboard server comes up first, the dashboard app will need to be refreshed in the browser window after quarkus-kafka-inventory-demo comes up.
+The dashboard will only display data when https://github.com/merlante/quarkus-kafka-inventory-demo is running. See there for running instructions. If quarkus-kafka-inventory-demo comes up after the dashboard single page app loads in the browser, the dashboard window will need to be refreshed.
 
 ```bash
 git clone https://github.com/merlante/patternfly-inventory-demo-dashboard.git
