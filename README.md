@@ -1,6 +1,6 @@
 # patternfly-inventory-demo-dashboard
 
-This dashboard is the component that provides the visual "front door" to the kafka inventory demo app. It retrieves and displays topic messages from the TOPICS_WEBSOCKET_ENDPOINT uri and is extendable to provide other actions than simulate inventory movement events.
+This dashboard is the component that provides the visual "front door" to the kafka inventory demo app. It retrieves and displays topic messages from the TOPICS_WEBSOCKET_ENDPOINT uri and is extendable to provide other actions to simulate inventory movement events.
 
 This demo dashboard is based on the Patternfly Seed (https://github.com/patternfly/patternfly-react-seed), which is an open source build scaffolding utility for web apps.
 
@@ -18,6 +18,11 @@ Yarn works as well. i.e.
 yarn run start:dev
 ```
 
+In a browser:
+```bash
+http://localhost:9000
+```
+
 ## Quick-start for prod with containers
 
 Webpack build:
@@ -33,7 +38,12 @@ docker build -f src/docker/Dockerfile -t [repo_name]patternfly-inventory-demo-da
 
 Running on docker:
 ```bash
-docker run --rm -d -p 8080:8080 [repo_name]patternfly-inventory-demo-dashboard
+docker run --rm -d -p 9000:8080 [repo_name]patternfly-inventory-demo-dashboard
+```
+
+In a browser:
+```bash
+http://localhost:9000
 ```
 
 ## Development scripts
