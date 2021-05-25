@@ -4,7 +4,9 @@ This dashboard is the component that provides the visual "front door" to the kaf
 
 This demo dashboard is based on the Patternfly Seed (https://github.com/patternfly/patternfly-react-seed), which is an open source build scaffolding utility for web apps.
 
-## Quick-start
+## Development quick-start
+
+The dashboard will only display data when https://github.com/merlante/quarkus-kafka-inventory-demo is running. See there for running instructions. If the dashboard server comes up first, the dashboard app will need to be refreshed in the browser window after quarkus-kafka-inventory-demo comes up.
 
 ```bash
 git clone https://github.com/merlante/patternfly-inventory-demo-dashboard.git
@@ -14,6 +16,24 @@ npm install && npm run start:dev
 Yarn works as well. i.e.
 ```bash
 yarn run start:dev
+```
+
+## Quick-start for prod with containers
+
+Webpack build:
+```bash
+yarn build
+```
+
+Building container image with webpack dist on nginx image:
+
+```bash
+docker build -f src/docker/Dockerfile -t [repo_name]patternfly-inventory-demo-dashboard .
+```
+
+Running on docker:
+```bash
+docker run --rm -d -p 8080:8080 [repo_name]patternfly-inventory-demo-dashboard
 ```
 
 ## Development scripts
